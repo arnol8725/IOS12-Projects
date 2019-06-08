@@ -36,7 +36,7 @@ class ViewController: UIViewController {
             print("Pulso Cancelar")
         })
         let actionDestructive = UIAlertAction(title: "Cancelar d", style: .destructive) { _ in
-            print("Pulso Cancelar")
+            print("Pulso actionDestructive")
         }
         
         controller.addAction(action)

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,57 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_1_iamrich" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ruby" translatesAutoresizingMaskIntoConstraints="NO" id="cit-CN-O0R">
+                                <rect key="frame" x="47" y="309" width="320" height="278"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cit-CN-O0R" secondAttribute="height" multiplier="160:139" id="huK-Kn-ana"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwV-iN-bd5">
+                                <rect key="frame" x="61.666666666666657" y="627" width="291" height="53"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                <state key="normal" title="Pulsame y seras rico">
+                                    <color key="titleColor" red="0.80768163069999999" green="0.1072988193" blue="0.079112482639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPulsar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="59B-2q-m3F"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="i Am Rich?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PuB-pL-aDf">
+                                <rect key="frame" x="131" y="227" width="152" height="42"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                <color key="textColor" red="0.8076816307106599" green="0.10729881927530642" blue="0.079112482638982212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66441810369999998" green="0.91303221109999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cit-CN-O0R" firstAttribute="top" secondItem="PuB-pL-aDf" secondAttribute="bottom" constant="40" id="0EU-8V-sGB"/>
+                            <constraint firstItem="PuB-pL-aDf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1fe-S4-Pc2"/>
+                            <constraint firstItem="FwV-iN-bd5" firstAttribute="top" secondItem="cit-CN-O0R" secondAttribute="bottom" constant="40" id="QcK-6d-P7V"/>
+                            <constraint firstItem="cit-CN-O0R" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ePh-vm-RqF"/>
+                            <constraint firstItem="FwV-iN-bd5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p1S-CP-GqX"/>
+                            <constraint firstItem="cit-CN-O0R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vgq-Hv-mpv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imagen" destination="cit-CN-O0R" id="T3p-LD-DiT"/>
+                        <outlet property="llblTitulo" destination="PuB-pL-aDf" id="n62-T9-SgM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ruby" width="319.66665649414062" height="277.66665649414062"/>
+    </resources>
 </document>
